@@ -1,4 +1,4 @@
-<h1>System Health Monitoring With PowerShell</h1>
+<h1>System Health Monitoring with PowerShell</h1>
 <h2>Description</h2>
 
 System Health Monitoring with PowerShell is a project designed to help IT professionals monitor system performance using simple PowerShell commands. The script in this project retrieves and displays real-time information on CPU usage, memory utilization, disk space, and network activity, allowing administrators to assess system health automatically. This project is useful for IT help desk roles, system administrators, and those learning PowerShell for system management.<br />
