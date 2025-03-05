@@ -17,12 +17,12 @@ System Health Monitoring with PowerShell is a project designed to help IT profes
 
 <h2>High-Level Steps</h2>
 
-- Create Virtual Machines and Network Setup
-- Monitor Network Traffic with Wireshark
-- Configure and Test Firewall Rules (NSG)
-- Analyze Different Network Protocols in Wireshark
+- Create Resource Group and Virtual Machine
+- Writing the PowerShell Script
+- Running the PowerShell Script
+- Reviewing and Interpreting Results
 
-<h2>Actions and Observations</h2>
+<h2>Script walk-through</h2>
 
 <p>
 Create Virtual Machines and Network Setup
