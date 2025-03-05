@@ -22,38 +22,38 @@ System Health Monitoring with PowerShell is a project designed to help IT profes
 - Running the PowerShell Script
 - Reviewing and Interpreting Results
 
-<h2>Script walk-through</h2>
+<h2>Actions and Observations</h2>
 
 <p>
-Create Virtual Machines and Network Setup
+Create Resource Group and Virtual Machine
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To begin the lab, I first create a Resource Group in the Azure Portal to organize all related resources. Next, I deploy a Windows 10 Virtual Machine (VM), ensuring that it creates a new Virtual Network (VNet) and Subnet for communication. Once the Windows VM is set up, I proceed to create a Linux (Ubuntu) VM, making sure that it is in the same Resource Group and Virtual Network as the Windows VM. This setup ensures both machines can communicate internally without requiring external internet access.</p>
+To begin, I set up my virtual machine (VM) in Azure, ensuring that it runs Windows Server or Windows 10. After deploying the VM, I log in via Remote Desktop Protocol (RDP) and open PowerShell as an administrator. This ensures I have the necessary permissions to run system health monitoring commands. Additionally, I verify my execution policy by running Get-ExecutionPolicy to check if scripts are allowed to run. If needed, I temporarily allow script execution by setting the policy to RemoteSigned using Set-ExecutionPolicy RemoteSigned -Scope Process. </p>
 <br />
 
 <p>
-Monitor Network Traffic with Wireshark
+Writing the PowerShell Script
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Once my virtual machines are running, I use Remote Desktop to connect to the Windows 10 VM. The first step is to install Wireshark, a network protocol analyzer, which will allow me to inspect network traffic in real time. After installation, I start a packet capture in Wireshark and filter for ICMP traffic. To generate ICMP traffic, I retrieve the private IP address of the Ubuntu VM and attempt to ping it from the Windows 10 VM. I observe the ping requests and replies appearing in Wireshark. Additionally, I open PowerShell or Command Prompt and attempt to ping a public website (e.g., www.google.com) to analyze outbound ICMP traffic.</p>
+Next, I open Notepad and write a simple PowerShell script that gathers system health metrics. The script retrieves information such as CPU usage, memory utilization, disk space, and network statistics. Once I finish writing the script, I save it as SystemHealthMonitor.ps1 in an easily accessible directory, such as C:\Scripts. Before closing Notepad, I double-check that I have saved the file with the correct .ps1 extension rather than .txt.</p>
 <br />
 
 <p>
-Configure and Test Firewall Rules (NSG)
+Running the PowerShell Script
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-With network traffic monitoring in place, I test how firewall rules impact communication. I initiate a continuous ping from the Windows 10 VM to the Ubuntu VM. Then, I navigate to the Azure Portal, locate the Network Security Group (NSG) assigned to the Ubuntu VM, and disable inbound ICMP traffic by creating a rule that blocks it. Returning to Wireshark and the command line, I observe that the ping requests stop receiving replies, indicating the firewall rule is working as expected. To restore connectivity, I re-enable ICMP traffic in the NSG and confirm that the pings resume successfully.</p>
+With my script saved, I launch PowerShell as an administrator and navigate to the directory where the script is stored using the cd command. I then verify that my script is present by running dir. Once confirmed, I execute the script using .\SystemHealthMonitor.ps1. As the script runs, I observe the output displaying real-time system health data, confirming that the system is being monitored effectively.</p>
 <br />
 <p>
-Analyze Different Network Protocols in Wireshark
-<p>
+ Reviewing and Interpreting Results
+ <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next, I use Wireshark to analyze different network protocols. I filter for SSH traffic and initiate an SSH session from the Windows VM to the Ubuntu VM using its private IP address (ssh labuser@<private IP>). As I enter commands in the Linux terminal, I observe SSH packets being captured. Then, I filter for DHCP traffic and renew my Windows 10 VM's IP address by running ipconfig /renew in PowerShell. Wireshark captures the DHCP request and response, showing how the VM acquires a new IP. Similarly, I analyze DNS traffic by using the nslookup command to find the IP addresses of google.com and disney.com, observing DNS query and response packets. Finally, I filter for RDP traffic (port 3389) and notice constant packet activity, confirming that Remote Desktop continuously transmits data to provide a live session.
+After executing the script, I analyze the output to understand my system’s performance. I check CPU load percentages, available memory, disk space usage, and network activity. If needed, I modify the script to collect additional data or format the output for better readability. This step helps me practice analyzing system health and troubleshooting potential performance issues. I also automated this process with Task Scheduler tool.
