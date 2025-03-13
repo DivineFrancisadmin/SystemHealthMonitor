@@ -27,7 +27,7 @@ System Health Monitoring with PowerShell is a project designed to help IT profes
 <p>
 Create Resource Group and Virtual Machine
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="827" alt="Screenshot 2025-03-12 at 9 58 47 PM" src="https://github.com/user-attachments/assets/354bb498-cecd-4fb4-a804-2eecfb0c4e16" />
 </p>
 <p>
 To begin, I set up my virtual machine (VM) in Azure, ensuring that it runs Windows Server or Windows 10. After deploying the VM, I log in via Remote Desktop Protocol (RDP) and open PowerShell as an administrator. This ensures I have the necessary permissions to run system health monitoring commands. Additionally, I verify my execution policy by running Get-ExecutionPolicy to check if scripts are allowed to run. If needed, I temporarily allow script execution by setting the policy to RemoteSigned using Set-ExecutionPolicy RemoteSigned -Scope Process. </p>
