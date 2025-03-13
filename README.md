@@ -36,7 +36,7 @@ To begin, I set up my virtual machine (VM) in Azure, ensuring that it runs Windo
 <p>
 Writing the PowerShell Script
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1054" alt="Screenshot 2025-03-12 at 10 00 11 PM" src="https://github.com/user-attachments/assets/756cf989-fe5e-467f-b951-8da6b7bb1e77" />
 </p>
 <p>
 Next, I open Notepad and write a simple PowerShell script that gathers system health metrics. The script retrieves information such as CPU usage, memory utilization, disk space, and network statistics. Once I finish writing the script, I save it as SystemHealthMonitor.ps1 in an easily accessible directory, such as C:\Scripts. Before closing Notepad, I double-check that I have saved the file with the correct .ps1 extension rather than .txt.</p>
