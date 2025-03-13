@@ -56,4 +56,4 @@ With my script saved, I launch PowerShell as an administrator and navigate to th
 <img width="1045" alt="Screenshot 2025-03-12 at 10 03 53 PM" src="https://github.com/user-attachments/assets/fde83226-3d21-46fa-bc35-e12e2fa5ce7d" />
 </p>
 <p>
-After executing the script, I analyze the output to understand my system’s performance. I check CPU load percentages, available memory, disk space usage, and network activity. If needed, I modify the script to collect additional data or format the output for better readability. This step helps me practice analyzing system health and troubleshooting potential performance issues. I also automated this process with Task Scheduler tool.
+After executing the script, I analyze the output to understand my system’s performance. I check CPU load percentages, available memory, disk space usage, and network activity. If needed, I modify the script to collect additional data or format the output for better readability. This step helps me practice analyzing system health and troubleshooting potential performance issues. I also automated this process with the Task Scheduler tool.
