@@ -45,7 +45,7 @@ Next, I open Notepad and write a simple PowerShell script that gathers system he
 <p>
 Running the PowerShell Script
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1045" alt="Screenshot 2025-03-12 at 10 03 53 PM" src="https://github.com/user-attachments/assets/fde83226-3d21-46fa-bc35-e12e2fa5ce7d" />
 </p>
 <p>
 With my script saved, I launch PowerShell as an administrator and navigate to the directory where the script is stored using the cd command. I then verify that my script is present by running dir. Once confirmed, I execute the script using .\SystemHealthMonitor.ps1. As the script runs, I observe the output displaying real-time system health data, confirming that the system is being monitored effectively.</p>
